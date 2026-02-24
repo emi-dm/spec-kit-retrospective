@@ -15,7 +15,15 @@ Community extension that adds a post-implementation retrospective command focuse
 - Highlights critical/significant/minor/positive deviations
 - Suggests follow-ups for constitution/spec/checklist updates
 
-## Install (local development)
+## Install
+
+### From GitHub release
+
+```bash
+specify extension add --from https://github.com/emi-dm/spec-kit-retrospective/archive/refs/tags/v1.0.0.zip
+```
+
+### Local development
 
 ```bash
 specify extension add --dev /path/to/extensions/retrospective
@@ -32,6 +40,24 @@ Then run from your AI assistant:
 ```text
 /speckit.retrospective.analyze
 ```
+
+## Safety and Quality Gates
+
+- **Human Gate for spec updates**: if retrospective recommends changing `spec.md`, the command must ask for explicit confirmation before any modification.
+- **Safe default**: any ambiguous input is treated as **No**.
+- **Self-assessment checklist**: the command validates coverage, metrics, constitution compliance, and actionability before finalizing output.
+- **Blocking criteria**: if critical checklist items fail, report finalization is blocked until gaps are fixed.
+
+## Output
+
+The command writes `retrospective.md` to the feature directory and includes:
+
+- Executive summary and key metrics
+- Requirement coverage matrix (FR/NFR/SC)
+- Architecture drift and significant deviations
+- Proposed spec changes (for approval before applying)
+- Constitution compliance review
+- Prioritized recommendations and traceability appendix
 
 ## Quick Test Plan
 
