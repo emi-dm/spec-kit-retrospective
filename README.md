@@ -1,5 +1,7 @@
 # Retrospective Extension for Spec Kit
 
+![Retrospective Extension Logo](./logo_sk.jpeg)
+
 Community extension that adds a post-implementation retrospective command focused on spec adherence, drift analysis, and actionable follow-up.
 
 ## Command
