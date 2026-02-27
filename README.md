@@ -22,7 +22,7 @@ Community extension that adds a post-implementation retrospective command focuse
 ### From GitHub release
 
 ```bash
-specify extension add --from https://github.com/emi-dm/spec-kit-retrospective/archive/refs/tags/v1.0.0.zip
+specify extension add retrospective --from https://github.com/emi-dm/spec-kit-retrospective/archive/refs/tags/v1.0.0.zip
 ```
 
 ### Local development
